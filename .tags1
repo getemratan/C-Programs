@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+DOWN_KEY	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^#define DOWN_KEY /;"	macro	line:14	file:
+UP_KEY	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^#define UP_KEY /;"	macro	line:15	file:
+RIGHT_KEY	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^#define RIGHT_KEY /;"	macro	line:16	file:
+ESC	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^#define ESC /;"	macro	line:17	file:
+Add	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^int Add(int x, int y){$/;"	function	line:19	signature:(int x, int y)
+Sub	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^int Sub(int x, int y){$/;"	function	line:24	signature:(int x, int y)
+Mul	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^int Mul(int x, int y){$/;"	function	line:29	signature:(int x, int y)
+menu	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^void menu(int x){$/;"	function	line:34	signature:(int x)
+main	C:\Users\Getem\github\C-Programs\MenuWithArrow.c	/^int main(){$/;"	function	line:62
