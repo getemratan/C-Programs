@@ -16,47 +16,41 @@ Example: ....Menu....
 #define RIGHT_KEY 77
 #define ESC 27
 /* Function to add two values */
-int Add(int x, int y){
+void Add(){
+    system("cls");
+    int x, y;
+    printf("Enter two elements to add: \n");
+    scanf("%d %d", &x, &y);
     int result = x + y;
-    return result;
+    printf("Result: %d\n", result);
 }
 /* Function to subtract two values */
-int Sub(int x, int y){
+void Sub(){
+    system("cls");
+    int x, y;
+    printf("Enter two elements to subtract: \n");
+    scanf("%d %d", &x, &y);
     int result = x - y;
-    return result;
+    printf("Result: %d\n", result);
 }
 /* Function to Multiply two values */
-int Mul(int x, int y){
+void Mul(){
+    system("cls");
+    int x, y;
+    printf("Enter two elements to muliply: \n");
+    scanf("%d %d", &x, &y);
     int result = x * y;
-    return result;
+    printf("Result: %d\n", result);
 }
 /* Function to print the menu and 'x' is the cursor to the current menu item */
 void menu(int x){
-    switch(x){
-        case 0: printf("....Menu....\n");
-                printf("Add <-\n");
-                printf("Sub\n");
-                printf("Mul\n");
-                printf("Press Esc Key For Exit\n\n");
-                printf("Use UP and DOWN arrow key to navigate and RIGHT arrow key to perform operation!! ");
-                break;
-
-        case 1: printf("....Menu....\n");
-                printf("Add\n");
-                printf("Sub <-\n");
-                printf("Mul\n");
-                printf("Press Esc Key For Exit\n\n");
-                printf("Use UP and DOWN arrow key to navigate and RIGHT arrow key to perform operation!! ");
-                break;
-
-        case 2: printf("....Menu....\n");
-                printf("Add\n");
-                printf("Sub\n");
-                printf("Mul <-\n");
-                printf("Press Esc Key For Exit\n\n");
-                printf("Use UP and DOWN arrow key to navigate and RIGHT arrow key to perform operation!! ");
-                break;
-    }
+    printf("....Menu....\n");
+    printf(x == 0 ? "Add <-\n" : "Add\n");
+    printf(x == 1 ? "Sub <-\n" : "Sub\n");
+    printf(x == 2 ? "Mul <-\n" : "Mul\n");
+    printf("Press Esc Key For Exit\n\n");
+    printf("Use UP and DOWN arrow key to navigate\n");
+    printf("Enter to perform operation...");
 }
 
 int main(){
@@ -87,53 +81,26 @@ int main(){
                              menu(cursor);
                              break;
 
-                case RIGHT_KEY: if(cursor == 0){
-                                    printf("\nEnter two elements to add: \n");
-                                    int x, y;
-                                    scanf("%d %d", &x, &y);
-                                    printf("Result: %d\n", Add(x, y));
-                                    fflush(stdin);
-                                    printf("Do you want to go back to the main menu?? (Y/N)\n");
-                                    scanf("%c", &ch3);
-                                    if(ch3 == 'Y' || ch3 == 'y'){
-                                        break;
-                                    }
-                                    else{
-                                        exit(0);
-                                    }
-                                }
-                                else if(cursor == 1){
-                                    printf("\nEnter two elements to subtract: \n");
-                                    int x, y;
-                                    scanf("%d %d", &x, &y);
-                                    printf("Result: %d\n", Sub(x, y));
-                                    fflush(stdin);
-                                    printf("Do you want to go back to the main menu?? (Y/N)\n");
-                                    scanf("%c", &ch3);
-                                    if(ch3 == 'Y' || ch3 == 'y'){
-                                        break;
-                                    }
-                                    else{
-                                        exit(0);
-                                    }
-                                }
-                                else if(cursor == 2){
-                                    printf("\nEnter two elements to muliply: \n");
-                                    int x, y;
-                                    scanf("%d %d", &x, &y);
-                                    printf("Result: %d\n", Mul(x, y));
-                                    fflush(stdin);
-                                    printf("Do you want to go back to the main menu?? (Y/N)\n");
-                                    scanf("%c", &ch3);
-                                    if(ch3 == 'Y' || ch3 == 'y'){
-                                        break;
-                                    }
-                                    else{
-                                        exit(0);
-                                    }
-                                }
-
                 case ESC: break;
+            }
+        }
+        else if(ch1 == 10 || ch1 == 13){
+            switch(cursor){
+                case 0: Add();
+                        break;
+                case 1: Sub();
+                        break;
+                case 2: Mul();
+                        break;
+            }
+            fflush(stdin);
+            printf("Do you want to go back to the main menu?? (Y/N)\n");
+            scanf("%c", &ch3);
+            if(ch3 == 'Y' || ch3 == 'y'){
+                continue;
+            }
+            else{
+                exit(0);
             }
         }
     }while(ch1 != ESC);
