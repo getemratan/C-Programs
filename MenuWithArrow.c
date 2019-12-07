@@ -83,6 +83,7 @@ int main(){
                 case ESC: break;
             }
         }
+        /* Update: User can now use 'Enter' key to perform the corresponding operation */
         else if(ch1 == 10 || ch1 == 13){
             switch(cursor){
                 case 0: Add();
