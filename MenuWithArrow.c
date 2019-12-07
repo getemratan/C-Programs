@@ -13,7 +13,6 @@ Example: ....Menu....
 #include <conio.h>
 #define DOWN_KEY 80
 #define UP_KEY 72
-#define RIGHT_KEY 77
 #define ESC 27
 /* Function to add two values */
 void Add(){
